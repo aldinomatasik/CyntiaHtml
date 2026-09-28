@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cyntia Sade Patilangi">
+    <meta name="keyword" content="Belajar HTML, Belajar Web">
+    <meta name="description" content="Praktikum modul 2 - Pengenalan HTML Tingkat Lanjut">
+    <meta name="robots" content="index, follow">
+    <title>Pengenalan HTML Tingkat Lanjut</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; line-height: 1.6;">
+
+    <strong>Praktikum Pemrograman Web</strong>
+    <hr>
+    <h1>Pengenalan HTML Tingkat Lanjut</h1>
+    <hr>
+
+    <!-- 1. Elemen Form -->
+    <div>
+        <h2>Element Form</h2>
+        <hr>
+        <form action="" method="get">
+            <p>Input Teks Biasa: <input type="text" name="text_form" size="25"></p>
+            <p>Dengan Placeholder: <input type="text" name="text_placeholder" size="25" placeholder="Dengan Placeholder"></p>
+            <p>Input Readonly: <input type="text" name="readonly_form" size="25" value="Ini Readonly" readonly style="background-color: #eee;"></p>
+            <p>Input Disabled: <input type="text" name="disabled_form" value="Ini Disabled" size="25" disabled></p>
+            <p>Input Required: <input type="text" name="required_form" size="25" required placeholder="Ini Wajib Diisi (Required)"></p>
+            <p>Input Email: <input type="email" name="email_form" size="25" placeholder="Ini Email"></p>
+            <p>Input Password: <input type="password" name="password_form" size="25" placeholder="Ini Password"></p>
+            <p>Upload File: <input type="file" name="file"></p>
+            <input type="hidden" name="hidden_form" value="123456">
+
+            <p>
+                Textarea:<br>
+                <textarea name="textarea_form" cols="40" rows="4" placeholder="Ini Textarea"></textarea>
+            </p>
+
+            <p>
+                Dropdown Pilihan:
+                <select name="pilihan">
+                    <option value="1">Pilihan 1</option>
+                    <option value="2" selected>Pilihan 2</option>
+                    <option value="3">Pilihan 3</option>
+                    <option value="4">Pilihan 4</option>
+                    <option value="5">Pilihan 5</option>
+                </select>
+            </p>
+
+            <p>
+                Radio Button:
+                <input type="radio" name="radio" value="radio1" id="radio1" checked><label for="radio1">Radio 1</label>
+                <input type="radio" name="radio" value="radio2" id="radio2"><label for="radio2">Radio 2</label>
+            </p>
+
+            <p>
+                Checkbox:
+                <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1"><label for="checkbox1">Checkbox 1</label>
+                <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2"><label for="checkbox2">Checkbox 2</label>
+            </p>
+
+            <p>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Simpan">
+                <input type="button" value="Button" onclick="alert('Tombol Button Ditekan!')">
+            </p>
+        </form>
+    </div>
+
+    <!-- 2. Elemen Embed -->
+    <div style="margin-top: 30px;">
+        <h2>Element Embed</h2>
+        <hr>
+        <embed src="assets/file.pdf" width="100%" height="400" type="application/pdf">
+    </div>
+
+    <!-- 3. Elemen Object -->
+    <div style="margin-top: 30px;">
+        <h2>Elemen Object</h2>
+        <hr>
+        <object data="assets/file.pdf" width="100%" height="400" type="application/pdf"></object>
+    </div>
+
+    <!-- 4. Elemen Iframe -->
+    <div style="margin-top: 30px;">
+        <h2>Element Iframe</h2>
+        <hr>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QIas1H7H_m0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- 5. Tag Semantic HTML5 -->
+    <div style="margin-top: 30px;">
+        <h2>Element Semantic HTML5</h2>
+        <hr>
+        <header style="background: #f0f0f0; padding: 10px; margin-bottom: 5px;">Ini Header</header>
+        <nav style="background: #e0e0e0; padding: 10px; margin-bottom: 5px;">Ini Nav</nav>
+        <main style="background: #fafafa; padding: 15px; margin-bottom: 5px;">
+            Ini Main
+            <section style="background: #ffffff; padding: 10px; margin: 10px 0; border: 1px dashed #ccc;">Ini Section di dalam Main</section>
+            <article style="background: #ffffff; padding: 10px; margin: 10px 0; border: 1px dashed #ccc;">Ini Article di dalam Main</article>
+        </main>
+        <aside style="background: #f5f5f5; padding: 10px; margin-bottom: 5px;">Ini Aside</aside>
+        <footer style="background: #d0d0d0; padding: 10px;">Ini Footer</footer>
+    </div>
+
+    <br><br>
+    <div>
+        <hr>
+        <strong>Program Studi Sistem Informasi ITTelkom Surabaya</strong>
+    </div>
+
+</body>
+</html>

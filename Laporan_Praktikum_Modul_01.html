@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Laporan Praktikum Modul 1 - Pengenalan HTML</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 2.5cm;
+    }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .cover {
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 80px;
+      page-break-after: always;
+    }
+    .cover h1 {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .cover h2 {
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+    .cover .logo-container {
+      margin: 40px 0;
+    }
+    .cover .logo-container img {
+      height: 120px;
+    }
+    .cover .identity {
+      margin-top: 60px;
+      font-size: 16px;
+    }
+    .cover .identity table {
+      margin: 0 auto;
+      text-align: left;
+    }
+    .cover .institution {
+      margin-top: 60px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    h2.section-title {
+      font-size: 18px;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 4px;
+      margin-top: 40px;
+      text-transform: uppercase;
+    }
+    h3.sub-title {
+      font-size: 15px;
+      margin-top: 25px;
+    }
+    p, li {
+      font-size: 14px;
+      text-align: justify;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      font-size: 13px;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #333;
+      padding: 8px 10px;
+    }
+    table.data-table th {
+      background-color: #f2f2f2;
+    }
+    .screenshot-box {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .screenshot-box img {
+      max-width: 100%;
+      border: 1px solid #777;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .screenshot-caption {
+      font-size: 12px;
+      font-style: italic;
+      margin-top: 6px;
+    }
+    pre {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-left: 4px solid #333;
+      padding: 12px;
+      font-family: Consolas, monospace;
+      font-size: 11px;
+      overflow-x: auto;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
+    .callout {
+      background-color: #f8f9fa;
+      border-left: 4px solid #1976d2;
+      padding: 10px 15px;
+      margin: 15px 0;
+      font-size: 13px;
+    }
+    @media print {
+      body {
+        padding: 0;
+      }
+      .page-break {
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== COVER ==================== -->
+  <div class="cover">
+    <h1>LAPORAN PRAKTIKUM<br>PENGEMBANGAN APLIKASI WEB</h1>
+    <h2>MODUL 1: PENGENALAN HTML (TINGKAT DASAR & LANJUT)</h2>
+    
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo ITTelkom Surabaya">
+    </div>
+
+    <div class="identity">
+      <table>
+        <tr>
+          <td width="130"><b>Nama</b></td>
+          <td width="20">:</td>
+          <td><b>[Nama Mahasiswa]</b></td>
+        </tr>
+        <tr>
+          <td><b>NIM</b></td>
+          <td>:</td>
+          <td><b>[NIM Mahasiswa]</b></td>
+        </tr>
+        <tr>
+          <td><b>Kelas</b></td>
+          <td>:</td>
+          <td><b>S1 Sistem Informasi</b></td>
+        </tr>
+        <tr>
+          <td><b>Dosen Pengampu</b></td>
+          <td>:</td>
+          <td><b>Purnama Anaking, S.Kom., M.Kom.</b></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="institution">
+      PROGRAM STUDI S1 SISTEM INFORMASI<br>
+      TELKOM UNIVERSITY SURABAYA<br>
+      2026
+    </div>
+  </div>
+
+  <!-- ==================== BAB I ==================== -->
+  <h2 class="section-title">BAB I: PENDAHULUAN</h2>
+  
+  <h3 class="sub-title">1.1 Latar Belakang</h3>
+  <p>
+    Hypertext Markup Language (HTML) merupakan pondasi utama dalam pembangunan struktur halaman pada World Wide Web (WWW). HTML bertugas memberikan kerangka dan mendefinisikan elemen-elemen informasi seperti teks, gambar, tabel, formulir, hingga berkas multimedia agar dapat diterjemahkan secara visual oleh web browser. Pemahaman yang kokoh terhadap struktur dasar, elemen semantik modern (HTML5), dan penanganan masukan pengguna melalui formulir merupakan kompetensi esensial bagi mahasiswa Program Studi Sistem Informasi dalam rekayasa perangkat lunak berbasis web.
+  </p>
+
+  <h3 class="sub-title">1.2 Tujuan Praktikum</h3>
+  <ol>
+    <li>Mahasiswa mampu memahami struktur hierarki dasar dokumen HTML (DOCTYPE, html, head, body).</li>
+    <li>Mahasiswa mampu mengimplementasikan elemen-elemen dasar HTML seperti heading, paragraf, pemformatan teks, list, multimedia, dan tabel bersarang (*nested table*).</li>
+    <li>Mahasiswa mampu menerapkan tag Semantic HTML5 (header, nav, main, article, aside, footer) dan penyematan video melalui tag iframe.</li>
+    <li>Mahasiswa mampu merancang antarmuka formulir registrasi interaktif menggunakan fieldset, legend, dan berbagai tipe kontrol input.</li>
+    <li>Mahasiswa mampu mempublikasikan dokumen web ke layanan hosting publik (GitHub Pages / Vercel).</li>
+  </ol>
+
+  <!-- ==================== BAB II ==================== -->
+  <h2 class="section-title">BAB II: DASAR TEORI</h2>
+
+  <h3 class="sub-title">2.1 Elemen Block-Level vs Inline-Level</h3>
+  <p>
+    Elemen HTML terbagi ke dalam dua perilaku rendering utama:
+  </p>
+  <ul>
+    <li><b>Block-level Element:</b> Elemen yang selalu memulai baris baru dan mengambil lebar horizontal penuh yang tersedia (contoh: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;table&gt;</code>).</li>
+    <li><b>Inline-level Element:</b> Elemen yang lebarnya hanya sebesar konten di dalamnya dan tidak membuat baris baru (contoh: <code>&lt;span&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;a&gt;</code>).</li>
+  </ul>
+
+  <h3 class="sub-title">2.2 Tabel Bersarang (Nested Table)</h3>
+  <p>
+    Dalam perancangan layout sebelum berkembangnya CSS Grid dan Flexbox, tag <code>&lt;table&gt;</code> kerap digunakan untuk pembagian tata letak. Tabel bersarang (*nested table*) adalah teknik menempatkan sebuah tabel utuh di dalam sel (<code>&lt;td&gt;</code>) dari tabel induk. Hal ini memungkinkan pembagian kolom yang fleksibel dan independen antar baris tanpa terikat pada jumlah kolom baris lainnya.
+  </p>
+
+  <h3 class="sub-title">2.3 Semantic HTML5</h3>
+  <p>
+    Standar HTML5 memperkenalkan tag semantik yang memiliki makna struktural eksplisit, baik untuk peramban, pengembang, maupun mesin pencari (SEO). Elemen utama mencakup <code>&lt;header&gt;</code> (area kepala halaman/navigasi), <code>&lt;nav&gt;</code> (menu tautan), <code>&lt;main&gt;</code> (konten utama), <code>&lt;article&gt;</code> (artikel mandiri), <code>&lt;aside&gt;</code> (konten pendukung/sidebar), dan <code>&lt;footer&gt;</code> (kaki halaman).
+  </p>
+
+  <h3 class="sub-title">2.4 Formulir Registrasi (HTML Form Controls)</h3>
+  <p>
+    Formulir dibangun dengan tag <code>&lt;form&gt;</code> yang memuat berbagai masukan (*input controls*). Tag <code>&lt;fieldset&gt;</code> digunakan untuk mengelompokkan elemen formulir yang saling berkaitan secara visual dengan kotak pembatas, sedangkan <code>&lt;legend&gt;</code> berfungsi memberikan judul pada kotak pengelompokan tersebut.
+  </p>
+
+  <div class="page-break"></div>
+
+  <!-- ==================== BAB III ==================== -->
+  <h2 class="section-title">BAB III: IMPLEMENTASI DAN PEMBAHASAN TUGAS</h2>
+
+  <!-- 3.1 TUGAS DASAR -->
+  <h3 class="sub-title">3.1 Tugas HTML Dasar: Halaman Profil Prodi Sistem Informasi (tugas.html)</h3>
+  <p>
+    <b>Deskripsi Tugas:</b> Membuat replika halaman profil Program Studi Sistem Informasi ITTelkom Surabaya menggunakan tata letak tabel bergaris (*border*), daftar berbutir (*list*), tautan, dan gambar logo resmi.
+  </p>
+
+  <p><b>Penjelasan Alur Program:</b></p>
+  <ol>
+    <li><b>Tabel Penampung Utama:</b> Menggunakan <code>&lt;table style="border: 1px solid black; border-collapse: collapse;"&gt;</code> sebagai bingkai luar halaman.</li>
+    <li><b>Baris 1 (Header & Navigasi):</b> Memuat sel logo prodi (15%), sel menu navigasi (70%) yang menggunakan tabel bersarang (*nested table*) berisikan 5 menu (Tentang Kami, Akademik, Dosen & Staf, Kerja Sama, Blog), dan sel tautan Admisi (15%).</li>
+    <li><b>Baris 2 (Hero Banner):</b> Sel tunggal dengan perataan tengah memuat slogan <i>"Excellent in Connecting Systems"</i> serta deskripsi singkat keilmuan Sistem Informasi.</li>
+    <li><b>Baris 3 (3 Kolom Peran Lulusan):</b> Menggunakan tabel bersarang berkolom tiga dengan lebar masing-masing 33.33% untuk memuat peran <i>Project Manager</i>, <i>IS Engineer</i>, dan <i>Business & System Analyst</i>.</li>
+    <li><b>Baris 4 (Footer 3 Kolom):</b> Menggunakan tabel bersarang untuk membagi informasi sejarah program studi (50%), daftar tautan penting dan bermanfaat menggunakan <code>&lt;ul&gt;</code> dan <code>&lt;li&gt;</code> (25%), serta info kontak dan media sosial (25%).</li>
+    <li><b>Baris 5 (Copyright):</b> Sel penutup berisi hak cipta dan tim pembuat (*CODER Team*).</li>
+  </ol>
+
+  <div class="screenshot-box">
+    <img src="assets/screenshots/output_tugas_dasar.png" alt="Screenshot Output tugas.html">
+    <div class="screenshot-caption">Gambar 3.1 Tampilan Browser Halaman tugas.html (Port 5500)</div>
+  </div>
+
+  <p><b>Potongan Source Code Utama (tugas.html):</b></p>
+  <pre>&lt;!-- Potongan Struktur Nested Table tugas.html --&gt;
+&lt;table style="border: 1px solid black; width: 100%; border-collapse: collapse;"&gt;
+  &lt;tr&gt;
+    &lt;td style="padding: 0; border: none;"&gt;
+      &lt;table class="nested-table"&gt;
+        &lt;tr&gt;
+          &lt;td width="15%" style="text-align: center;"&gt;&lt;img src="assets/logo.png" height="50"&gt;&lt;/td&gt;
+          &lt;td width="70%"&gt;
+            &lt;table class="nav-table"&gt;
+              &lt;tr&gt;&lt;td&gt;Tentang Kami&lt;/td&gt;&lt;td&gt;Akademik&lt;/td&gt;&lt;td&gt;Dosen & Staf&lt;/td&gt;&lt;td&gt;Kerja Sama&lt;/td&gt;&lt;td&gt;Blog&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;
+          &lt;/td&gt;
+          &lt;td width="15%" style="text-align: center;"&gt;&lt;a href="#" style="color:#6a1b9a;"&gt;Admisi&lt;/a&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;!-- Baris Konten Hero, 3 Kolom Peran, dan Footer Informasi --&gt;
+&lt;/table&gt;</pre>
+
+  <hr style="margin: 30px 0; border: 0; border-top: 1px dashed #ccc;">
+
+  <!-- 3.2 TUGAS SEMANTIC -->
+  <h3 class="sub-title">3.2 Tugas HTML Semantic: Blog Sistem Informasi (semantic.html)</h3>
+  <p>
+    <b>Deskripsi Tugas:</b> Membangun halaman artikel blog Sistem Informasi dengan memanfaatkan elemen struktural semantik HTML5 serta menyematkan rekaman video wisuda/dies natalis melalui tag <code>&lt;iframe&gt;</code>.
+  </p>
+
+  <p><b>Penjelasan Alur Program:</b></p>
+  <ol>
+    <li><b>Elemen <code>&lt;header&gt;</code> dan <code>&lt;nav&gt;</code>:</b> Menampung identitas situs, menu navigasi, dan judul besar blog *"Blog Sistem Informasi"*.</li>
+    <li><b>Elemen <code>&lt;main&gt;</code>:</b> Menjadi wadah konten sentral yang membagi ruang menjadi dua pilar:
+      <ul>
+        <li><code>&lt;article&gt;</code> (Kiri - Lebar 73%): Memuat judul berita *"Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude"*, tiga paragraf narasi berita, dan video embed YouTube Dies Natalis ke-4 ITTelkom Surabaya menggunakan tag <code>&lt;iframe&gt;</code>.</li>
+        <li><code>&lt;aside&gt;</code> (Kanan - Lebar 27%): Berisi navigasi samping yang menampilkan daftar *Artikel Terbaru* dan *Artikel Terpopular* menggunakan daftar link tidak bernomor (<code>&lt;ul&gt;</code>).</li>
+      </ul>
+    </li>
+    <li><b>Elemen <code>&lt;footer&gt;</code>:</b> Menampilkan informasi profil prodi, tautan bermanfaat, kontak alamat, dan baris hak cipta.</li>
+  </ol>
+
+  <div class="screenshot-box">
+    <img src="assets/screenshots/output_semantic.png" alt="Screenshot Output semantic.html">
+    <div class="screenshot-caption">Gambar 3.2 Tampilan Browser Halaman semantic.html (Port 5500)</div>
+  </div>
+
+  <p><b>Potongan Source Code Utama (semantic.html):</b></p>
+  <pre>&lt;!-- Struktur Utama Semantic HTML5 --&gt;
+&lt;header&gt;
+  &lt;!-- Logo, Navigasi, dan Judul Blog --&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td width="73%" style="vertical-align: top;"&gt;
+        &lt;article&gt;
+          &lt;h2&gt;Dua Wisudawan Sistem Informasi Berhasil Meraih Predikat Cumlaude&lt;/h2&gt;
+          &lt;p&gt;Institut Teknologi Telkom Surabaya telah menggelar prosesi wisuda...&lt;/p&gt;
+          &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/QIas1H7H_m0"&gt;&lt;/iframe&gt;
+        &lt;/article&gt;
+      &lt;/td&gt;
+      &lt;td width="27%" style="vertical-align: top;"&gt;
+        &lt;aside&gt;
+          &lt;h3&gt;Artikel Terbaru&lt;/h3&gt;
+          &lt;ul&gt;...&lt;/ul&gt;
+          &lt;h3&gt;Artikel Terpopular&lt;/h3&gt;
+          &lt;ul&gt;...&lt;/ul&gt;
+        &lt;/aside&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</pre>
+
+  <hr style="margin: 30px 0; border: 0; border-top: 1px dashed #ccc;">
+
+  <div class="page-break"></div>
+
+  <!-- 3.3 TUGAS FORM -->
+  <h3 class="sub-title">3.3 Tugas HTML Lanjut: Form Registrasi Mahasiswa (form.html)</h3>
+  <p>
+    <b>Deskripsi Tugas:</b> Membangun formulir pendaftaran interaktif yang terstruktur dengan pengelompokan fieldset, penataan label rapi sejajar titik dua (:), serta berbagai variasi elemen input data.
+  </p>
+
+  <p><b>Penjelasan Alur Program:</b></p>
+  <ol>
+    <li><b>Fieldset 1 (Biodata):</b>
+      <ul>
+        <li>Input Nama Mahasiswa (<code>type="text"</code> dengan placeholder).</li>
+        <li>NIM Mahasiswa (<code>type="text"</code> dengan atribut <code>readonly</code> bernilai 123456789).</li>
+        <li>Alamat Mahasiswa (elemen <code>&lt;textarea&gt;</code> 6 baris 45 kolom).</li>
+        <li>Tanggal Lahir (3 elemen <code>&lt;select&gt;</code> bertingkat untuk tanggal 01-31, bulan Januari-Desember, dan tahun 1990-2005).</li>
+        <li>Jenis Kelamin (dua opsi <code>&lt;input type="radio"&gt;</code> bernama sama <code>jenis_kelamin</code>).</li>
+        <li>Upload Foto (<code>&lt;input type="file"&gt;</code>) dan URL Website (<code>&lt;input type="url"&gt;</code>).</li>
+      </ul>
+    </li>
+    <li><b>Fieldset 2 (Info Akun):</b> Memuat masukan Email (<code>type="email"</code>), Username (<code>type="text"</code>), Password (<code>type="password"</code>), dan Konfirmasi Password.</li>
+    <li><b>Fieldset 3 (Kemampuan Dasar):</b> Memuat pilihan multi-opsi berbasis <code>&lt;input type="checkbox"&gt;</code> untuk HTML, CSS, Javascript, PHP, MySQL, Laravel, dan React Native.</li>
+    <li><b>Kelompok Tombol:</b> Tiga tombol aksi di bawah formulir: <code>type="reset"</code> (mengosongkan form), <code>type="submit"</code> (mengirim form), dan <code>type="button"</code>.</li>
+  </ol>
+
+  <div class="screenshot-box">
+    <img src="assets/screenshots/output_form.png" alt="Screenshot Output form.html">
+    <div class="screenshot-caption">Gambar 3.3 Tampilan Browser Halaman form.html (Port 5500)</div>
+  </div>
+
+  <p><b>Potongan Source Code Utama (form.html):</b></p>
+  <pre>&lt;!-- Struktur Form Registrasi dengan Fieldset --&gt;
+&lt;form action="" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Biodata&lt;/legend&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Nama Mahasiswa&lt;/td&gt;&lt;td&gt;:&lt;/td&gt;
+        &lt;td&gt;&lt;input type="text" name="nama" placeholder="Nama Anda"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;No Induk Mahasiswa (NIM)&lt;/td&gt;&lt;td&gt;:&lt;/td&gt;
+        &lt;td&gt;&lt;input type="text" name="nim" value="123456789" readonly&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- Input alamat, tanggal lahir (select), radio JK, file upload, url, kampus --&gt;
+    &lt;/table&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Info Akun&lt;/legend&gt;
+    &lt;!-- Input email, username, password, ulangi password --&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Kemampuan Dasar&lt;/legend&gt;
+    &lt;input type="checkbox" name="skill[]" value="HTML"&gt; HTML
+    &lt;input type="checkbox" name="skill[]" value="CSS"&gt; CSS
+    &lt;!-- Checkbox javascript, php, mysql, laravel, react native --&gt;
+  &lt;/fieldset&gt;
+
+  &lt;div class="btn-group"&gt;
+    &lt;input type="reset" value="Reset"&gt;
+    &lt;input type="submit" value="Simpan"&gt;
+    &lt;input type="button" value="Button"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+
+  <hr style="margin: 30px 0; border: 0; border-top: 1px dashed #ccc;">
+
+  <!-- 3.4 PUBLIKASI HOSTING -->
+  <h3 class="sub-title">3.4 Publikasi Halaman Web Secara Online</h3>
+  <p>
+    Sesuai instruksi soal nomor 4 dan 5 pada modul halaman 17, seluruh berkas proyek praktikum ini dipersiapkan untuk dipublikasikan secara online menggunakan platform <b>GitHub Pages</b> atau <b>Vercel</b>.
+  </p>
+  <div class="callout">
+    <b>Tautan Publikasi Halaman Web:</b><br>
+    Domain URL Hosting: <code>https://[username-anda].github.io/praktikum-paw-modul1/</code><br>
+    <i>(Atau via Vercel: <code>https://praktikum-paw-modul1.vercel.app/</code>)</i>
+  </div>
+  <p><b>Langkah-langkah Publikasi Singkat ke GitHub Pages:</b></p>
+  <ol>
+    <li>Membuat repository baru di GitHub dengan nama misal <code>praktikum-paw-modul1</code>.</li>
+    <li>Mengunggah seluruh file (<code>index.html</code>, <code>tugas.html</code>, <code>semantic.html</code>, <code>form.html</code>, dan folder <code>assets/</code>) ke repository tersebut.</li>
+    <li>Membuka menu <b>Settings</b> &rarr; <b>Pages</b> pada repository GitHub.</li>
+    <li>Pada bagian <b>Branch</b>, pilih branch <code>main</code> dan folder <code>/ (root)</code>, lalu klik <b>Save</b>.</li>
+    <li>Halaman web resmi dapat diakses publik oleh asisten lab / dosen penguji melalui URL yang disediakan.</li>
+  </ol>
+
+  <!-- ==================== BAB IV ==================== -->
+  <h2 class="section-title">BAB IV: KESIMPULAN</h2>
+  <ol>
+    <li>Struktur dasar HTML berfungsi sebagai kerangka visual dan logis dari suatu dokumen web, di mana setiap elemen memiliki aturan semantik dan visual tersendiri.</li>
+    <li>Teknik <i>nested table</i> berhasil diterapkan pada <code>tugas.html</code> untuk membagi baris dan kolom yang independen dan presisi tanpa terjadi pergeseran lebar sel antargrup.</li>
+    <li>Tag semantik HTML5 pada <code>semantic.html</code> memberikan struktur konten yang terorganisir secara hierarkis (header, nav, main, article, aside, footer) dan mempermudah aksesibilitas serta integrasi multimedia interaktif (iframe YouTube).</li>
+    <li>Penerapan <code>&lt;fieldset&gt;</code> dan <code>&lt;legend&gt;</code> pada <code>form.html</code> meningkatkan keterbacaan data formulir dan memberikan pengalaman pengisian data yang intuitif bagi pengguna.</li>
+  </ol>
+
+</body>
+</html>
