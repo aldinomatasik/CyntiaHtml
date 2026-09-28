@@ -6,46 +6,81 @@
   <title>Praktikum Pengembangan Aplikasi Web - Modul 1</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 30px auto;
-      max-width: 800px;
+      max-width: 850px;
       line-height: 1.6;
       color: #333;
+      padding: 0 15px;
     }
     header {
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      border-bottom: 2px solid #e91e63;
+      padding-bottom: 12px;
+      margin-bottom: 25px;
+    }
+    h1 {
+      color: #ad1457;
+      margin-bottom: 5px;
+    }
+    .badge {
+      display: inline-block;
+      background: #fce4ec;
+      color: #c2185b;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .section-title {
+      color: #444;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-top: 30px;
     }
     .card {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 15px 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px 20px;
       margin-bottom: 15px;
       background-color: #fafafa;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      border-color: #f48fb1;
     }
     .card h3 {
       margin-top: 0;
-      color: #0d47a1;
+      margin-bottom: 8px;
+      color: #880e4f;
+    }
+    .card p {
+      margin: 0 0 12px 0;
+      color: #555;
+      font-size: 14px;
     }
     a.btn {
       display: inline-block;
-      padding: 6px 12px;
-      background-color: #1976d2;
+      padding: 7px 15px;
+      background-color: #d81b60;
       color: white;
       text-decoration: none;
-      border-radius: 4px;
-      margin-top: 5px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 500;
     }
     a.btn:hover {
-      background-color: #1565c0;
+      background-color: #ad1457;
     }
     footer {
-      margin-top: 30px;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
       font-size: 13px;
-      color: #666;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
@@ -53,34 +88,48 @@
 
   <header>
     <h1>Praktikum Pengembangan Aplikasi Web</h1>
-    <p><b>Modul 1: Pengenalan HTML (Dasar & Lanjut)</b><br>
-    Program Studi S1 Sistem Informasi - Telkom University Surabaya</p>
+    <p style="margin: 4px 0;"><strong>Modul 01: Pengenalan HTML</strong> &bull; S1 Sistem Informasi Telkom University Surabaya</p>
+    <span class="badge">Nama: Cyntia Sade Patilangi &bull; NIM: 108052500068</span>
   </header>
 
   <main>
-    <h2>Daftar Hasil Tugas Praktikum</h2>
+    <h2 class="section-title">A &amp; C. Latihan Praktikum Terbimbing</h2>
 
     <div class="card">
-      <h3>1. Tugas HTML Dasar (tugas.html)</h3>
-      <p>Implementasi pembuatan halaman web profil Program Studi Sistem Informasi menggunakan struktur elemen dasar HTML, tabel bergaris, list, dan link.</p>
+      <h3>1. Latihan HTML Tingkat Dasar (dasar.html)</h3>
+      <p>Mencakup latihan struktur dasar HTML, elemen level (block &amp; inline), text formatting, ordered/unordered/description list, elemen media (gambar, audio, video), serta pembuatan tabel data dan nested table.</p>
+      <a href="dasar.html" class="btn">Buka dasar.html &rarr;</a>
+    </div>
+
+    <div class="card">
+      <h3>2. Latihan HTML Tingkat Lanjut (lanjut.html)</h3>
+      <p>Mencakup latihan formulir interaktif (variasi input text, readonly, disabled, required, password, email, file, textarea, dropdown, radio, checkbox, submit/reset), sematan dokumen PDF (embed &amp; object), iframe YouTube, dan tag semantic HTML5.</p>
+      <a href="lanjut.html" class="btn">Buka lanjut.html &rarr;</a>
+    </div>
+
+    <h2 class="section-title">B &amp; D. Tugas Mandiri Praktikum</h2>
+
+    <div class="card">
+      <h3>3. Tugas Mandiri HTML Dasar: Profil Prodi Sistem Informasi (tugas.html)</h3>
+      <p>Implementasi perancangan tata letak website profil Program Studi Sistem Informasi ITTelkom Surabaya menggunakan struktur tabel bersarang (nested table) bergaris solid 1px hitam dengan header, navigasi, hero banner, 3 kolom peran, dan footer informasi.</p>
       <a href="tugas.html" class="btn">Buka tugas.html &rarr;</a>
     </div>
 
     <div class="card">
-      <h3>2. Tugas HTML Lanjut - Semantic (semantic.html)</h3>
-      <p>Implementasi halaman blog sistem informasi menggunakan tag semantik HTML5 seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;iframe&gt;</code>, dan <code>&lt;footer&gt;</code>.</p>
+      <h3>4. Tugas Mandiri HTML Lanjut 1: Blog Berita Semantic HTML5 (semantic.html)</h3>
+      <p>Implementasi halaman blog sistem informasi menggunakan struktur semantik HTML5 baku (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;footer&gt;</code>) dan sematan video YouTube.</p>
       <a href="semantic.html" class="btn">Buka semantic.html &rarr;</a>
     </div>
 
     <div class="card">
-      <h3>3. Tugas HTML Lanjut - Form Registrasi (form.html)</h3>
-      <p>Implementasi form registrasi mahasiswa lengkap dengan fieldset, legend, berbagai tipe input (text, email, password, file, radio, checkbox), select dropdown, textarea, dan tombol aksi.</p>
+      <h3>5. Tugas Mandiri HTML Lanjut 2: Form Registrasi Mahasiswa (form.html)</h3>
+      <p>Implementasi form registrasi data mahasiswa lengkap dengan fieldset &amp; legend (Biodata, Info Akun, Kemampuan Dasar), perataan borderless table, berbagai kontrol input, dropdown tanggal lahir, dan tombol aksi.</p>
       <a href="form.html" class="btn">Buka form.html &rarr;</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Praktikum Pengembangan Aplikasi Web - Telkom University Surabaya</p>
+    <p>&copy; 2026 Cyntia Sade Patilangi (108052500068) &bull; Praktikum Pemrograman Aplikasi Web &bull; Telkom University Surabaya</p>
   </footer>
 
 </body>
